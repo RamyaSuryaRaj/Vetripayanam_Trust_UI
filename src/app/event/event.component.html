@@ -1,0 +1,86 @@
+<section class="bg-fit overlay-black-50 page-header-bg" data-jarallax='{"speed": 0.4}' style="background-image: url(../../assets/image/charity/project/event.png);">
+  <div class="container">
+    <div class="row text-center justify-content-center">
+      <div class="col-lg-6">
+        <h1 class="text-white">Events </h1>
+        <!-- <p class="text-white lead">Ours, He will criticize him here.</p> -->
+        <h2 class="scroll-down"></h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slice-ptb">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="mb-5 text-center">
+          <h2 class="fw-bold">Events <span class="fw-normal"> Build a future. </span></h2>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 mb-4 mb-lg-0" *ngFor="let event of events">
+        <div class="position-relative">
+          <div class="border p-0">
+            <div id="carousel1" class="carousel carousel-light slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000" *ngFor="let images of event.eventImages">
+                  <img [src]="images" class="d-block w-100" alt="..." >
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+          
+          <div class="p-3">
+            <h6 class="mb-3">{{event.eventName}}</h6>
+            <div class="progress-item mb-3">
+              <div class="progress" style="height: 6px;">
+                <div class="progress-bar bg-green" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="d-flex">
+              <strong class="text-warning">$12,000</strong>
+              <span class="ms-auto text-dark">06+</span>
+            </div>
+            <div class="d-flex mb-2">
+              <span>Read of $6,000</span>
+              <span class="ms-auto text-dark">Gold of $10,000</span>
+            </div>
+            <hr>
+            <p>Totam ipsam maxime sed deserunt laborum tempora.</p>
+            <a class="btn btn-rounded btn-black btn-xs" href="#">Read more</a>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-12 mt-4">
+        <nav aria-label="...">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#!" tabindex="-1" aria-disabled="true"> <i class="feather icon-arrow-left pe-2"></i> Prev </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#!">1</a></li>
+            <li class="page-item active" aria-current="page"><a class="page-link" href="#!">2</a></li>
+            <li class="page-item"><a class="page-link" href="#!">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#!">Next <i class="feather icon-arrow-right ps-2"></i></a>
+            </li>
+          </ul>
+        </nav>
+        
+
+      </div> -->
+    </div>
+  </div>
+</section>
