@@ -20,6 +20,8 @@
     "@angular/router": "^16.2.0",
     "@cycjimmy/swiper-animation": "^6.0.2",
     "@fontsource/poppins": "^5.0.8",
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "@ng-bootstrap/ng-bootstrap": "^16.0.0",
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^5.3.2",
@@ -31,8 +33,10 @@
     "jquery.appear": "^1.0.1",
     "magnific-popup": "^1.1.0",
     "malihu-custom-scrollbar-plugin": "^3.1.5",
+    "ngx-owl-carousel": "^2.0.7",
     "popper.js": "^1.16.1",
     "rxjs": "~7.8.0",
+    "slicknav": "^1.0.8",
     "swiper": "^10.3.1",
     "tslib": "^2.3.0",
     "typer-js": "^5.5.3",
@@ -52,3 +56,4 @@
     "typescript": "~5.1.3"
   }
 }
+                            
