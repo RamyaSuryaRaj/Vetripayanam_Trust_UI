@@ -25,7 +25,7 @@
 	<link rel="stylesheet" href="assets/css/nice-select.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body >
     <!-- ? Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -86,10 +86,9 @@
                                     </div>
                                     <!-- Header-btn -->
                                     <div class="header-right-btn d-none d-lg-block ml-20">
-                                      
                                         <button type="button" class="header-btn btn" data-toggle="modal" data-target="#volunteerModal">
                                             Volunteer
-                                          </button>
+                                        </button>
                                     </div>
                                     <div class="header-right-btn d-none d-lg-block ml-20">
                                         <a href="" class="btn1 header-btn">Donate Now</a>
@@ -116,7 +115,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                    <form action="#" name="volunteerForm" onsubmit="handleSubmit(event)">
+                    <form action="#" name="volunteerForm" onsubmit="handleVolunteerSubmit(event)">
                         <div class="mt-10">
                             <input type="text" name="Name" placeholder="Name"
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'" required
@@ -150,6 +149,7 @@
               </div>
             </div>  
           </div>
+        </div>
         <!-- Header End -->
     </header>
     <!-- header end -->
@@ -295,64 +295,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-9 col-md-12">
-                    <!-- single-job-content -->
-                    <div class="single-job-items mb-30">
-                        <div class="job-items">
-                            <div class="company-img">
-                                <a href="#"><img src="assets/img/gallery/socialEvents1.png" alt=""></a>
-                            </div>
-                            <div class="job-tittle">
-                                <a href="#"><h4>Donation is Hope</h4></a>
-                                <p>Lorem ipvsum dolor sit amext, consectetur adipisicing elit,<br> smod tempor incididunt ut labore et dolore.</p>
-                                <ul>
-                                    <li><i class="far fa-clock"></i>8:30 - 9:30am</li>
-                                    <li><i class="fas fa-sort-amount-down"></i>18.01.2021</li>
-                                    <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-12">
-                    <!-- single-job-content -->
-                    <div class="single-job-items mb-30">
-                        <div class="job-items">
-                            <div class="company-img">
-                                <a href="#"><img src="assets/img/gallery/socialEvents2.png" alt=""></a>
-                            </div>
-                            <div class="job-tittle">
-                                <a href="#"><h4>A hand for Children</h4></a>
-                                <p>Lorem ipvsum dolor sit amext, consectetur adipisicing elit,<br> smod tempor incididunt ut labore et dolore.</p>
-                                <ul>
-                                    <li><i class="far fa-clock"></i>8:30 - 9:30am</li>
-                                    <li><i class="fas fa-sort-amount-down"></i>18.01.2021</li>
-                                    <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-12">
-                    <!-- single-job-content -->
-                    <div class="single-job-items mb-30">
-                        <div class="job-items">
-                            <div class="company-img">
-                                <a href="#"><img src="assets/img/gallery/socialEvents3.png" alt=""></a>
-                            </div>
-                            <div class="job-tittle">
-                                <a href="#"><h4>Help for Children</h4></a>
-                                <p>Lorem ipvsum dolor sit amext, consectetur adipisicing elit,<br> smod tempor incididunt ut labore et dolore.</p>
-                                <ul>
-                                    <li><i class="far fa-clock"></i>8:30 - 9:30am</li>
-                                    <li><i class="fas fa-sort-amount-down"></i>18.01.2021</li>
-                                    <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="row justify-content-center" id="eventsId">
             </div>
         </div>
     </section>
@@ -368,7 +311,9 @@
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4">
-                        <a href="#" class="btn1 f-right sm-left">Become A Volunteer</a>
+                        <button type="button" class=" btn1 f-right sm-left" data-toggle="modal" data-target="#volunteerModal">
+                            Become A Volunteer
+                        </button>
                     </div>
                 </div>
             </div>
@@ -385,7 +330,7 @@
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <!-- Counter Up -->
                                 <div class="single-counter text-center">
-                                    <span class="counter color-green">6,200</span>
+                                    <span class="counter color-green">8</span>
                                     <span class="plus">+</span>
                                     <p class="color-green">Donation</p>
                                 </div>
@@ -393,7 +338,7 @@
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <!-- Counter Up -->
                                 <div class="single-counter text-center">
-                                    <span class="counter color-green">80</span>
+                                    <span class="counter color-green">6200</span>
                                     <span class="plus">+</span>
                                     <p class="color-green">Fund Raised</p>
                                 </div>
@@ -401,17 +346,9 @@
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <!-- Counter Up -->
                                 <div class="single-counter text-center">
-                                    <span class="counter color-green">256</span>
+                                    <span class="counter color-green">11</span>
                                     <span class="plus">+</span>
-                                    <p class="color-green">Donation</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <!-- Counter Up -->
-                                <div class="single-counter text-center">
-                                    <span class="counter color-green">256</span>
-                                    <span class="plus">+</span>
-                                    <p class="color-green">Donation</p>
+                                    <p class="color-green">Volunteers</p>
                                 </div>
                             </div>
                         </div>
@@ -565,7 +502,38 @@
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
     <script>
-		function handleSubmit(event) {
+        window.onload = getEvents;
+        function getEvents(){
+            $.get('http://localhost:3000/api/event/event',function(result){
+                var html = '';
+                if(result.status == 'success'){
+                    for(var i=0;i<result.data.length;i++){
+                        var event = new Date(result.data[i].eventDateTime);
+                         html = html+ ` <div class="col-lg-9 col-md-12">
+                                    <!-- single-job-content -->
+                                    <div class="single-job-items mb-30">
+                                        <div class="job-items">
+                                            <div class="company-img">
+                                                <a href="#"><img src="${result.data[i].eventImages[0]}" alt=""></a>
+                                            </div>
+                                            <div class="job-tittle">
+                                                <a href="#"><h4>${result.data[i].eventName}</h4></a>
+                                                <p>${result.data[i].eventDetails}</p>
+                                                <ul>
+                                                    <li><i class="far fa-clock"></i>${event.toLocaleTimeString('en-US')}</li>
+                                                    <li><i class="fas fa-sort-amount-down"></i>${event.getDate()}-${event.getMonth()}-${event.getFullYear()}</li>
+                                                    <li><i class="fas fa-map-marker-alt"></i>${result.data[i].eventLocation}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>`;
+                    }
+                }
+                document.getElementById("eventsId").innerHTML+=html;
+            })
+        }
+		function handleVolunteerSubmit(event) {
 			event.preventDefault();
 			const formData = new FormData(event.target);
 			formObj = {};

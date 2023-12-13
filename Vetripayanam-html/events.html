@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> Charity | Teamplate</title>
+    <title> Charity </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -88,10 +88,12 @@
                                     </div>
                                     <!-- Header-btn -->
                                     <div class="header-right-btn d-none d-lg-block ml-20">
-                                        <a href="contact.html" class="btn header-btn">Donate</a>
+                                        <button type="button" class="header-btn btn" data-toggle="modal" data-target="#volunteerModal">
+                                            Volunteer
+                                        </button>
                                     </div>
                                     <div class="header-right-btn d-none d-lg-block ml-20">
-                                        <a href="contact.html" class="btn1 header-btn">Volunteer</a>
+                                        <a href="" class="btn1 header-btn">Donate Now</a>
                                     </div>
                                 </div>
                             </div> 
@@ -105,6 +107,51 @@
             </div>
         </div>
         <!-- Header End -->
+        <div class="modal fade" id="volunteerModal" tabindex="-1" role="dialog" aria-labelledby="volunteerModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title" id="volunteerModalLabel">Volunteer Now</h2>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" name="volunteerForm" onsubmit="handleVolunteerSubmit(event)">
+                        <div class="mt-10">
+                            <input type="text" name="Name" placeholder="Name"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'" required
+                                class="single-input">
+                        </div>
+                        <div class="mt-10">
+                            <input type="email" name="Email" placeholder="Email address"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required
+                                class="single-input">
+                        </div>
+                        <div class="mt-10">
+                            <input type="number" name="Mobile" placeholder="Mobile Number"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mobile Number'" required
+                                class="single-input">
+                        </div>
+                        <div class="mt-10">
+                            <input type="text" name="Education" placeholder="Education"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Education'" required
+                                class="single-input">
+                        </div>
+                        <div class="mt-10">
+                            <input type="text" name="Remarks" placeholder="Remarks"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Remarks'" required
+                                class="single-input">
+                        </div>
+						<div class="modal-footer">
+						  <button type="button" class="btn " data-dismiss="modal">Close</button>
+						  <button type="submit" class="btn1"  >Save</button>
+						</div>
+				</form>
+              </div>
+            </div>  
+          </div>
+        </div>
     </header>
     <!-- header end -->
     <main>
@@ -133,7 +180,7 @@
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <!-- Counter Up -->
                                 <div class="single-counter text-center">
-                                    <span class="counter color-green">6,200</span>
+                                    <span class="counter color-green">8</span>
                                     <span class="plus">+</span>
                                     <p class="color-green">Donation</p>
                                 </div>
@@ -141,7 +188,7 @@
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <!-- Counter Up -->
                                 <div class="single-counter text-center">
-                                    <span class="counter color-green">80</span>
+                                    <span class="counter color-green">6200</span>
                                     <span class="plus">+</span>
                                     <p class="color-green">Fund Raised</p>
                                 </div>
@@ -149,17 +196,9 @@
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <!-- Counter Up -->
                                 <div class="single-counter text-center">
-                                    <span class="counter color-green">256</span>
+                                    <span class="counter color-green">11</span>
                                     <span class="plus">+</span>
-                                    <p class="color-green">Donation</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <!-- Counter Up -->
-                                <div class="single-counter text-center">
-                                    <span class="counter color-green">256</span>
-                                    <span class="plus">+</span>
-                                    <p class="color-green">Donation</p>
+                                    <p class="color-green">Volunteers</p>
                                 </div>
                             </div>
                         </div>
@@ -181,115 +220,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-9 col-md-12">
-                    <!-- single-job-content -->
-                    <div class="single-job-items mb-30">
-                        <div class="job-items">
-                            <div class="company-img">
-                                <a href="#"><img src="assets/img/gallery/socialEvents1.png" alt=""></a>
-                            </div>
-                            <div class="job-tittle">
-                                <a href="#"><h4>Donation is Hope</h4></a>
-                                <ul>
-                                    <li><i class="far fa-clock"></i>8:30 - 9:30am</li>
-                                    <li><i class="fas fa-sort-amount-down"></i>18.01.2021</li>
-                                    <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-12">
-                    <!-- single-job-content -->
-                    <div class="single-job-items mb-30">
-                        <div class="job-items">
-                            <div class="company-img">
-                                <a href="#"><img src="assets/img/gallery/socialEvents2.png" alt=""></a>
-                            </div>
-                            <div class="job-tittle">
-                                <a href="#"><h4>A hand for Children</h4></a>
-                                <ul>
-                                    <li><i class="far fa-clock"></i>8:30 - 9:30am</li>
-                                    <li><i class="fas fa-sort-amount-down"></i>18.01.2021</li>
-                                    <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-12">
-                    <!-- single-job-content -->
-                    <div class="single-job-items mb-30">
-                        <div class="job-items">
-                            <div class="company-img">
-                                <a href="#"><img src="assets/img/gallery/socialEvents3.png" alt=""></a>
-                            </div>
-                            <div class="job-tittle">
-                                <a href="#"><h4>Help for Children</h4></a>
-                                <ul>
-                                    <li><i class="far fa-clock"></i>8:30 - 9:30am</li>
-                                    <li><i class="fas fa-sort-amount-down"></i>18.01.2021</li>
-                                    <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-12">
-                    <!-- single-job-content -->
-                    <div class="single-job-items mb-30">
-                        <div class="job-items">
-                            <div class="company-img">
-                                <a href="#"><img src="assets/img/gallery/socialEvents1.png" alt=""></a>
-                            </div>
-                            <div class="job-tittle">
-                                <a href="#"><h4>Donation is Hope</h4></a>
-                                <ul>
-                                    <li><i class="far fa-clock"></i>8:30 - 9:30am</li>
-                                    <li><i class="fas fa-sort-amount-down"></i>18.01.2021</li>
-                                    <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-12">
-                    <!-- single-job-content -->
-                    <div class="single-job-items mb-30">
-                        <div class="job-items">
-                            <div class="company-img">
-                                <a href="#"><img src="assets/img/gallery/socialEvents2.png" alt=""></a>
-                            </div>
-                            <div class="job-tittle">
-                                <a href="#"><h4>A hand for Children</h4></a>
-                                <ul>
-                                    <li><i class="far fa-clock"></i>8:30 - 9:30am</li>
-                                    <li><i class="fas fa-sort-amount-down"></i>18.01.2021</li>
-                                    <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-12">
-                    <!-- single-job-content -->
-                    <div class="single-job-items mb-30">
-                        <div class="job-items">
-                            <div class="company-img">
-                                <a href="#"><img src="assets/img/gallery/socialEvents3.png" alt=""></a>
-                            </div>
-                            <div class="job-tittle">
-                                <a href="#"><h4>Help for Children</h4></a>
-                                <ul>
-                                    <li><i class="far fa-clock"></i>8:30 - 9:30am</li>
-                                    <li><i class="fas fa-sort-amount-down"></i>18.01.2021</li>
-                                    <li><i class="fas fa-map-marker-alt"></i>Athens, Greece</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="row justify-content-center" id="eventsId">
             </div>
         </div>
     </section>
@@ -438,6 +369,71 @@
     <!-- Jquery Plugins, main Jquery -->	
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
-    
+    <script>
+        window.onload = getEvents;
+        function getEvents(){
+            $.get('http://localhost:3000/api/event/event',function(result){
+                var html = '';
+                if(result.status == 'success'){
+                    for(var i=0;i<result.data.length;i++){
+                        var event = new Date(result.data[i].eventDateTime);
+                         html = html+ ` <div class="col-lg-9 col-md-12">
+                                    <!-- single-job-content -->
+                                    <div class="single-job-items mb-30">
+                                        <div class="job-items">
+                                            <div class="company-img">
+                                                <a href="#"><img src="${result.data[i].eventImages[0]}" alt=""></a>
+                                            </div>
+                                            <div class="job-tittle">
+                                                <a href="#"><h4>${result.data[i].eventName}</h4></a>
+                                                <p>${result.data[i].eventDetails}</p>
+                                                <ul>
+                                                    <li><i class="far fa-clock"></i>${event.toLocaleTimeString('en-US')}</li>
+                                                    <li><i class="fas fa-sort-amount-down"></i>${event.getDate()}-${event.getMonth()}-${event.getFullYear()}</li>
+                                                    <li><i class="fas fa-map-marker-alt"></i>${result.data[i].eventLocation}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>`;
+                    }
+                }
+                document.getElementById("eventsId").innerHTML+=html;
+            })
+        }
+	    function handleVolunteerSubmit(event) {
+			event.preventDefault();
+			const formData = new FormData(event.target);
+			formObj = {};
+			for (const [fieldName] of formData) {
+				const fieldValue = formData.getAll(fieldName);
+				formObj[fieldName] = fieldValue.length == 1 ? fieldValue.toString() : fieldValue
+			};
+			const volunteer = {
+								"to": formObj.Email,
+								"subject": "New Volunteer",
+								"text": "Volunteer Details:"+JSON.stringify(formObj)								
+								}	
+			$.post('http://localhost:3000/api/admin/sendMail',volunteer,function(res){  
+                if(res.status == "success"){
+                    $("#volunteerModal").modal('hide'); 
+                    $('#volunteerModal').on('hidden.bs.modal', function(){
+                        $(this).find('form')[0].reset();
+                    });
+                    $.post('http://localhost:3000/api/admin/addVolunteer',volunteer,function(res){ 
+                        if(res.status == "success"){
+                           
+                        }
+                        else{
+
+                        }
+                    });
+                }
+                else{
+
+                }
+			 }); 							
+		}
+        </script>
     </body>
 </html>

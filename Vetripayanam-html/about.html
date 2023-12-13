@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> Charity | Teamplate</title>
+    <title> Charity </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -88,10 +88,12 @@
                                     </div>
                                     <!-- Header-btn -->
                                     <div class="header-right-btn d-none d-lg-block ml-20">
-                                        <a href="contact.html" class="btn header-btn">Donate</a>
+                                        <button type="button" class="header-btn btn" data-toggle="modal" data-target="#volunteerModal">
+                                            Volunteer
+                                        </button>
                                     </div>
                                     <div class="header-right-btn d-none d-lg-block ml-20">
-                                        <a href="contact.html" class="btn1 header-btn">Volunteer</a>
+                                        <a href="" class="btn1 header-btn">Donate Now</a>
                                     </div>
                                 </div>
                             </div> 
@@ -105,6 +107,51 @@
             </div>
         </div>
         <!-- Header End -->
+        <div class="modal fade" id="volunteerModal" tabindex="-1" role="dialog" aria-labelledby="volunteerModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title" id="volunteerModalLabel">Volunteer Now</h2>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" name="volunteerForm" onsubmit="handleVolunteerSubmit(event)">
+                        <div class="mt-10">
+                            <input type="text" name="Name" placeholder="Name"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'" required
+                                class="single-input">
+                        </div>
+                        <div class="mt-10">
+                            <input type="email" name="Email" placeholder="Email address"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required
+                                class="single-input">
+                        </div>
+                        <div class="mt-10">
+                            <input type="number" name="Mobile" placeholder="Mobile Number"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Mobile Number'" required
+                                class="single-input">
+                        </div>
+                        <div class="mt-10">
+                            <input type="text" name="Education" placeholder="Education"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Education'" required
+                                class="single-input">
+                        </div>
+                        <div class="mt-10">
+                            <input type="text" name="Remarks" placeholder="Remarks"
+                                onfocus="this.placeholder = ''" onblur="this.placeholder = 'Remarks'" required
+                                class="single-input">
+                        </div>
+						<div class="modal-footer">
+						  <button type="button" class="btn " data-dismiss="modal">Close</button>
+						  <button type="submit" class="btn1"  >Save</button>
+						</div>
+				</form>
+              </div>
+            </div>  
+          </div>
+        </div>
     </header>
     <main>
     <!--? Hero Start -->
@@ -245,7 +292,7 @@
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <!-- Counter Up -->
                                 <div class="single-counter text-center">
-                                    <span class="counter color-green">6,200</span>
+                                    <span class="counter color-green">8</span>
                                     <span class="plus">+</span>
                                     <p class="color-green">Donation</p>
                                 </div>
@@ -253,7 +300,7 @@
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <!-- Counter Up -->
                                 <div class="single-counter text-center">
-                                    <span class="counter color-green">80</span>
+                                    <span class="counter color-green">6200</span>
                                     <span class="plus">+</span>
                                     <p class="color-green">Fund Raised</p>
                                 </div>
@@ -261,17 +308,9 @@
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <!-- Counter Up -->
                                 <div class="single-counter text-center">
-                                    <span class="counter color-green">256</span>
+                                    <span class="counter color-green">11</span>
                                     <span class="plus">+</span>
-                                    <p class="color-green">Donation</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <!-- Counter Up -->
-                                <div class="single-counter text-center">
-                                    <span class="counter color-green">256</span>
-                                    <span class="plus">+</span>
-                                    <p class="color-green">Donation</p>
+                                    <p class="color-green">Volunteers</p>
                                 </div>
                             </div>
                         </div>
@@ -425,6 +464,40 @@
     <!-- Jquery Plugins, main Jquery -->	
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
-    
+    <script>
+        function handleVolunteerSubmit(event) {
+			event.preventDefault();
+			const formData = new FormData(event.target);
+			formObj = {};
+			for (const [fieldName] of formData) {
+				const fieldValue = formData.getAll(fieldName);
+				formObj[fieldName] = fieldValue.length == 1 ? fieldValue.toString() : fieldValue
+			};
+			const volunteer = {
+								"to": formObj.Email,
+								"subject": "New Volunteer",
+								"text": "Volunteer Details:"+JSON.stringify(formObj)								
+								}	
+			$.post('http://localhost:3000/api/admin/sendMail',volunteer,function(res){  
+                if(res.status == "success"){
+                    $("#volunteerModal").modal('hide'); 
+                    $('#volunteerModal').on('hidden.bs.modal', function(){
+                        $(this).find('form')[0].reset();
+                    });
+                    $.post('http://localhost:3000/api/admin/addVolunteer',volunteer,function(res){ 
+                        if(res.status == "success"){
+                           
+                        }
+                        else{
+
+                        }
+                    });
+                }
+                else{
+
+                }
+			 }); 							
+		}
+    </script>
     </body>
 </html>
