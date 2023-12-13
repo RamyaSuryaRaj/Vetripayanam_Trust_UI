@@ -1,28 +1,4 @@
-<!-- <div id="preloader-active">
-    <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="preloader-inner position-relative">
-            <div class="preloader-circle"></div>
-            <div class="preloader-img pere-text">
-                <img src="assets/image/logo.png" alt="Logo">
-            </div>
-        </div>
-    </div>
-</div> -->
-<!-- CSS here -->
-<!-- <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="../../assets/css/owl.carousel.min.css">
-<link rel="stylesheet" href="../../assets/css/slicknav.css">
-<link rel="stylesheet" href="../../assets/css/flaticon.css">
-<link rel="stylesheet" href="../../assets/css/progressbar_barfiller.css">
-<link rel="stylesheet" href="../../assets/css/gijgo.css">
-<link rel="stylesheet" href="../../assets/css/animate.min.css">
-<link rel="stylesheet" href="../../assets/css/animated-headline.css">
-<link rel="stylesheet" href="../../assets/css/magnific-popup.css">
-<link rel="stylesheet" href="../../assets/css/fontawesome-all.min.css">
-<link rel="stylesheet" href="../../assets/css/themify-icons.css">
-<link rel="stylesheet" href="../../assets/css/slick.css">
-<link rel="stylesheet" href="../../assets/css/nice-select.css">
-<link rel="stylesheet" href="../../assets/css/style.css"> -->
+
 
 <header>
   <!-- Header Start -->
@@ -73,11 +49,11 @@
                                   </nav>
                               </div>
                               <!-- Header-btn -->
-                              <div class="header-right-btn d-none d-lg-block ml-20">
-                                  <a href="contact.html" class="btn header-btn">Donate</a>
+                              <div class="header-right-btn d-none d-lg-block ml-20" (click)="openModal()">
+                                  <button class="btn header-btn" (click)="openModal()">Donate</button>
                               </div>
                               <div class="header-right-btn d-none d-lg-block ml-20">
-                                  <a href="contact.html" class="btn1 header-btn">Volunteer</a>
+                                  <button class="btn1 header-btn" (click)="openModal()">Volunteer</button>
                               </div>
                           </div>
                       </div> 

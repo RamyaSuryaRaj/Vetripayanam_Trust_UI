@@ -1,4 +1,6 @@
-@import "~bootstrap/dist/css/bootstrap.css";
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
+
+@import "~@flaticon/flaticon-uicons/css/brands/all";
 @import url("https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600;700;800;900&display=swap");
 /* line 33, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_color.scss */
 .white-bg {

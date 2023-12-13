@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { DonationComponent } from './donation/donation.component';
 import { VolunteerComponent } from './volunteer/volunteer.component';
 import { HomeComponent } from './home/home.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HomeComponent } from './home/home.component';
     ContactComponent,
     DonationComponent,
     VolunteerComponent,
-    HomeComponent
+    HomeComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

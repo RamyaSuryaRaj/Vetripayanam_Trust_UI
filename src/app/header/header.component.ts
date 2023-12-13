@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit, ViewChild, ElementRef} from '@angular/core';
 import { header } from '../models/header';
 import { headerTemplates } from '../_helpers/helper';
 
@@ -8,6 +8,7 @@ import { headerTemplates } from '../_helpers/helper';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  @ViewChild('myModal') myModal: ElementRef;
   headers = headerTemplates;
 
   constructor(){}
@@ -21,4 +22,14 @@ export class HeaderComponent {
         else x.active  = false;
       })
   }
+
+  openModal() {
+    debugger;
+    this.myModal.nativeElement.style.display = 'block';
+  }
+  
+  closeModal() {
+    this.myModal.nativeElement.style.display = 'none';
+  }
+    
 }
